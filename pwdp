@@ -1,0 +1,9 @@
+##  [Function pwdp]
+##   - runs pwd and checks to verify if working directory is physical or symlink
+pwdp() {
+  if [[ $(pwd) == $(pwd -P) ]]; then
+    pwd
+  else
+    pwd; pwd -P
+  fi
+}      ##### FUNCTION END : pwd
